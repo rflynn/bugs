@@ -1,0 +1,57 @@
+
+Planning
+--------
+Unrealistic Risk Assessment
+Backwards compatibility over security (See gets() standardization)
+
+Design
+--------
+http://en.wikipedia.org/wiki/Edge_case
+
+Hardware
+--------
+http://en.wikipedia.org/wiki/Halt_and_Catch_Fire
+http://en.wikipedia.org/wiki/Killer_poke
+
+Logic
+--------
+http://en.wikipedia.org/wiki/Infinite_loop
+http://en.wikipedia.org/wiki/Off_by_one_error
+
+Syntax
+--------
+http://en.wikipedia.org/wiki/%3D%3D#Equality
+
+Arithmetic
+----------
+http://en.wikipedia.org/wiki/Division_by_zero#In_computer_arithmetic
+http://en.wikipedia.org/wiki/Arithmetic_overflow
+http://en.wikipedia.org/wiki/Arithmetic_underflow
+http://en.wikipedia.org/wiki/Arithmetic_precision
+http://en.wikipedia.org/wiki/Rounding
+http://en.wikipedia.org/wiki/Numerical_stability
+improper conversion
+
+Resource
+----------
+http://en.wikipedia.org/wiki/Pointer_(computing)#Null_pointer
+http://en.wikipedia.org/wiki/Uninitialized_variable
+http://en.wikipedia.org/wiki/Access_violation
+http://en.wikipedia.org/wiki/Buffer_overflow
+http://en.wikipedia.org/wiki/Stack_overflow
+
+Concurrency
+-----------
+http://en.wikipedia.org/wiki/Race_condition
+http://en.wikipedia.org/wiki/Deadlock
+http://en.wikipedia.org/wiki/Priority_inversion
+
+Review
+-----------
+Inadequate Review
+
+Testing
+Inadequate Testing
+
+Response
+Complacency
