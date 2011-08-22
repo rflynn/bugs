@@ -172,6 +172,8 @@ uasort($Bugs,
   <li><a href="http://en.wikipedia.org/wiki/List_of_software_bugs">List of software bugs</a> Wikipedia
   <li><a href="http://www.rvs.uni-bielefeld.de/publications/compendium/index.html">Computer-Related Incidents with Commercial Aircraft</a> Peter B. Ladkin, Hiroshi Sogame, Jan Hennig
   <li><a href="http://www.wired.com/software/coolapps/news/2005/11/69355?currentPage=all">History's Worst Software Bugs</a> Simson Garfinkel, 2005
+  <li><a href="http://www.faqs.org/faqs/space/probe/">Space FAQ - Planetary Probe History</a>
+  <li><a href="http://whiley.org/2010/08/02/infamous-software-failures-in-new-zealand/">Infamous Software Failures in New Zealand</a>
   <li><a href="http://en.wikipedia.org/wiki/Software_bug">Software Bug</a> Wikipedia
   <li><a href="http://www.docstoc.com/docs/75805555/Application-Security">Bad Software</a> Greg Hoglund
 </ol>

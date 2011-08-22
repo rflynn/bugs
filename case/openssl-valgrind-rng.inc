@@ -22,7 +22,7 @@ $Bugs['openssl-valgrind-rng'] = array(
     'improper testing' => 1,
   ),
   'mitigating' => array(
-    'difficult to exploit' => 1,
+    'non-trivial to exploit' => 1,
   ),
   'refs' => array(
     array(

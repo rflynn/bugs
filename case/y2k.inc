@@ -5,6 +5,7 @@ $Bugs['y2k'] = array(
   'title' => 'Y2K',
   'when' => 'Jan 1, 2000',
   'industry' => 'business',
+  'summary' => '',
   'result' => array(
     'large-scale engineering effort' => null,
     'widespread minor problems' => null,

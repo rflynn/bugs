@@ -12,7 +12,7 @@ $Bugs['soviet-nuclear-missile-false-alarm'] = array(
     'injuries' => 0,
     'dollars' => 0,
     'near-thermonuclear-war' => true,
-    'lives-at-risk' => 200e6,
+    'lives-at-risk' => 500e6,
   ),
   'causes' => array(
     'deadline pressure' => 2,
@@ -24,8 +24,7 @@ $Bugs['soviet-nuclear-missile-false-alarm'] = array(
   'mitigating' => array(
     'secondary sources of information' => 1,
     'human in the loop' => 1,
-    'logic' => 1,
-    'caution' => 1,
+    'reason' => 1,
   ),
   'refs' => array(
     array(
