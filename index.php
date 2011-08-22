@@ -97,18 +97,22 @@ function cost($c)
   # exchange rate atht the time of the incident
   if (@$c['dollars'])
   {
-    $cost[] = sprintf("$%s", number_format($c['dollars']));
+    $cost[] = sprintf('$%s', number_format($c['dollars']));
   }
   if (!@$c['dollars'])
   {
     if (@$cost['£'])
     {
-      $cost[] = sprintf("£%s", number_format($c['£']));
+      $cost[] = sprint('"£', number_format($c['£']));
     }
+  }
+  if (@$c['jobs'])
+  {
+    $cost[] = sprintf('%s jobs', number_format($c['jobs']));
   }
   if (@$c['recalls'])
   {
-    $cost[] = sprintf("%s recalls", number_format($c['recalls']));
+    $cost[] = sprintf('%s recalls', number_format($c['recalls']));
   }
 if (@$c['remote-vulnerabilities'])
 {
@@ -168,6 +172,9 @@ uasort($Bugs,
     $bcost = inflation(@$bc['dollars'], $b['when']);
     if ($acost != $bcost)
       return $acost > $bcost ? -1 : 1;
+    $cmp = @$bc['jobs'] - @$ac['jobs'];
+    if ($cmp)
+      return $cmp;
     $cmp = @$bc['recalls'] - @$ac['recalls'];
     if ($cmp)
       return $cmp;
@@ -189,6 +196,7 @@ uasort($Bugs,
 <table style="border-collapse:collapse; border:1px solid #ccc">
 
 <tr>
+  <th>#
   <th>Name
   <th>When
   <th>Cost
@@ -199,6 +207,7 @@ uasort($Bugs,
 
 <?php
   $Year = intval(date('Y'));
+  $i = 1;
   foreach (array_keys($Bugs) as $key)
   {
     $bug = $Bugs[$key];
@@ -208,6 +217,7 @@ uasort($Bugs,
 ?>
 
 <tr>
+  <td width="1" align="right"><?= $i++ ?>
   <td><a href="<?= eschtml($bug['refs'][0]['url']) ?>"><?= eschtml($bug['title']) ?></a>
   <td><?= eschtml($bug['when']) ?>
   <td align="right"><?= join("<br>\n", cost($cost)) ?>
@@ -225,7 +235,7 @@ uasort($Bugs,
 <h2>References</h2>
 
 <ol>
-  <li><a href="http://catless.ncl.ac.uk/Risks/">THE RISKS DIGEST</a>
+  <li><a href="http://catless.ncl.ac.uk/Risks/">THE RISKS DIGEST</a> Peter G. Neumann
   <li><a href="http://www5.in.tum.de/~huckle/bugse.html">Collection of Software Bugs</a> Prof. Thomas Huckle
   <li><a href="http://en.wikipedia.org/wiki/List_of_software_bugs">List of software bugs</a> Wikipedia
   <li><a href="http://sunnyday.mit.edu/accidents/space2001.pdf">Systemic Factors in Software-Related Accidents</a> Nancy G. Leveson
