@@ -35,6 +35,11 @@ $Bugs['patriot-missile-clock-drift'] = array(
       'author'    => 'United State Government Accountability Office',
       'url'       => 'http://www.gao.gov/products/IMTEC-92-26',
     ),
+    array(
+      'title'     => 'The Patriot Missile Failure',
+      'author'    => 'Douglas N. Arnold',
+      'url'       => 'http://www.ima.umn.edu/~arnold/disasters/patriot.html',
+    ),
   ),
 );
 
