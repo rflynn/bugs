@@ -18,6 +18,8 @@ Logic
 --------
 http://en.wikipedia.org/wiki/Infinite_loop
 http://en.wikipedia.org/wiki/Off_by_one_error
+http://en.wikipedia.org/wiki/Double_counting
+http://en.wikipedia.org/wiki/Corrupted_data
 
 Syntax
 --------
@@ -52,7 +54,10 @@ Review
 Inadequate Review
 
 Testing
+-----------
 Inadequate Testing
 
 Response
+-----------
 Complacency
+
