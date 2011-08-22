@@ -8,7 +8,7 @@ $Bugs['y2k'] = array(
   'summary' => '',
   'result' => array(
     'large-scale engineering effort' => null,
-    'widespread minor problems' => null,
+    'widespread problems' => null,
   ),
   'cost' => array(
     'deaths' => 0,
@@ -21,6 +21,7 @@ $Bugs['y2k'] = array(
     'arithmetic overflow' => null,
   ),
   'mitigating' => array(
+    'most problems were minor' => null,
     'diagnosed with sufficient lead time' => null,
     'correction effort widely successful' => null,
     'economic boon for COBOL programmers who contributed to the problem in the first place' => null,
