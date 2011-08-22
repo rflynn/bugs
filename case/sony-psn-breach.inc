@@ -10,9 +10,10 @@ $Bugs['sony-psn-breach'] = array(
     'failure to encrypt sensitive data' => null,
   ),
   'result' => array(
-    'PR disaster' => null,
+    '25 days of network downtime' => 1,
     '12.3 million credit card numbers at risk' => null,
     '77 million accounts at risk' => null,
+    'PR disaster' => null,
   ),
   'cost' => array(
     'deaths' => 0,
