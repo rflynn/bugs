@@ -8,7 +8,7 @@ $Bugs['flash-crash-2010'] = array(
   'industry' => 'financial',
   'causes' => array(
     'overreliance on automation' => 1,
-    'edge case' => 1,
+    'corner case' => 1,
   ),
   'cost' => array(
     'deaths' => 0,

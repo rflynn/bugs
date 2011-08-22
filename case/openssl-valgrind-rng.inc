@@ -7,7 +7,7 @@ $Bugs['openssl-valgrind-rng'] = array(
   'industry' => 'software',
   'summary' => 'In order to fix a warning issued by Valgrind, a maintainer of Debian patched OpenSSL and broke the random number generator in the process. The patch was uploaded in September 2006 and made its way into the official release; it was not reported until April 2008. Every key generated with the broken version is compromised (as the "random" numbers were made easily predictable), as is all data encrypted with it, threatening many applications that rely on encryption such as S/MIME, Tor, SSL or TLS protected connections and SSH.',
   'result' => array(
-    'millions of remote vulnerabilities' => 1
+    'millions of encryption vulnerabilities' => 1
   ),
   'cost' => array(
     'deaths' => 0,
