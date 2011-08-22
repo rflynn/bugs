@@ -15,11 +15,13 @@ th, td {
   border: 1px solid #ccc;
   padding: 0.25em;
 }
+th { border-color: #fff }
 td ul {
   list-style: none;
-  padding-left: 0.1em;
   margin-bottom: 0;
   font-size: smaller;
+  padding-left: 1em;
+  text-indent: -1em;
 }
 td ul li:before {
   content: "\00BB \0020";
@@ -29,35 +31,26 @@ td ul li:before {
 
 <body>
 
-<h1>Software Engineering Disaster Hall of Fame</h1>
+<h1><img src="/images/icons/bug.gif"> Software Engineering Disaster Hall of Fame</h1>
+<h3>Compiled by Ryan Flynn</h3>
 
 <?php
 
 error_reporting(E_ALL);
 
-@include_once('case/ariane-5-flight-501.inc');
-@include_once('case/f00f.inc');
-@include_once('case/f-22-raptor-dateline.inc');
-@include_once('case/fdiv.inc');
-@include_once('case/flash-crash-2010.inc');
-@include_once('case/gets.inc');
-@include_once('case/hms-sheffield-friendly-missile.inc');
-#@include_once('case/iran-655.inc');
-@include_once('case/mariner-1.inc');
-@include_once('case/mars-climate-orbiter.inc');
-@include_once('case/mars-polar-lander.inc');
-@include_once('case/monolithic-kernel.inc');
-@include_once('case/openssl-valgrind-rng.inc');
-@include_once('case/patriot-missile-clock-drift.inc');
-@include_once('case/ping-of-death.inc');
-@include_once('case/prius-brake-problem.inc');
-@include_once('case/spirit-rover-flash-memory-full.inc');
-@include_once('case/sony-psn-breach.inc');
-@include_once('case/sony-rootkit.inc');
-@include_once('case/soviet-nuclear-missile-false-alarm.inc');
-@include_once('case/therac-25.inc');
-@include_once('case/v-22-osprey.inc');
-@include_once('case/y2k.inc');
+$cases =
+  array_filter(
+    scandir('./case/'),
+    function ($f)
+    {
+      return preg_match('/\.inc$/', $f);
+    });
+
+foreach ($cases as $case)
+{
+  $path = "case/$case";
+  @include_once($path);
+}
 
 function eschtml($str)
 {
@@ -83,6 +76,10 @@ function tohtml($v)
   }
 }
 
+/*
+ * return inflation-adjusted dollar amount based on original cost and age
+ * $when can be in the forms: "Jan 1, 2000", "Jan, 2000", "2000", "2000-2001", "2000-present"
+ */
 function inflation($dollars, $when)
 {
   $Now = intval(date('Y'));
@@ -91,7 +88,6 @@ function inflation($dollars, $when)
     $yr = $Now;
   $ageyears = $Now - $yr;
   $factor = pow(1.02, $ageyears);
-  #printf("dollars=%f yr=%d factor=%f<br>\n", $dollars, $yr, $factor);
   return $dollars * $factor;
 }
 
@@ -149,7 +145,7 @@ uasort($Bugs,
   <td><a href="<?= eschtml($bug['refs'][0]['url']) ?>"><?= eschtml($bug['title']) ?></a>
   <td><?= eschtml($bug['when']) ?>
   <td align="right">
-    <?= $cost['deaths'] ? $cost['deaths'] . ' deaths' : '' ?>
+    <?= $cost['deaths'] ? $cost['deaths'] . ' lives' : '' ?>
     <?= $cost['injuries'] ? $cost['injuries'] . ' injuries' : '' ?>
     <?= @$cost['lives-at-risk'] ? number_format($cost['lives-at-risk']) . ' lives at risk' : '' ?>
     <?= @$cost['delay-days'] ? $cost['delay-days'] . ' day delay' : '' ?>
