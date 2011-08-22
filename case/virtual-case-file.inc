@@ -1,0 +1,37 @@
+<?php
+# ex: set ts=2 et:
+
+$Bugs['virtual-case-file'] = array(
+  'title' => 'Virtual Case File',
+  'when' => '2000-2005',
+  'industry' => 'government',
+  'summary' => "A software application internally managed by the FBI intended to modernize the bureau's outdated IT infrastructure between 2000 and 2005. The project was officially abandoned in January 2005, while still in development stage and cost the federal government nearly $170 million.",
+  'result' => array(
+    'entire program scrapped' => null,
+  ),
+  'cost' => array(
+    'deaths' => 0,
+    'injuries' => 0,
+    'dollars' => 170e6,
+  ),
+  'causes' => array(
+    'shifting requirements' => 1,
+    'mismanagement' => 1,
+    'scope creep' => 1,
+  ),
+  'mitigating' => array(
+  ),
+  'refs' => array(
+    array(
+      'title'     => 'Virtual Case File',
+      'author'    => 'Wikipedia',
+      'url'       => 'http://en.wikipedia.org/wiki/Virtual_Case_File',
+    ),
+    array(
+      'title'     => "The FBI's Upgrade That Wasn't",
+      'author'    => 'Dan Eggen and Griff Witte',
+      'url'       => 'http://www.washingtonpost.com/wp-dyn/content/article/2006/08/17/AR2006081701485.html',
+    ),
+  ),
+);
+
