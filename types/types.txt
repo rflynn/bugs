@@ -7,6 +7,7 @@ Backwards compatibility over security (See gets() standardization)
 Design
 --------
 http://en.wikipedia.org/wiki/Edge_case
+http://en.wikipedia.org/wiki/Corner_case
 
 Hardware
 --------
