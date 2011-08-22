@@ -12,7 +12,8 @@ $Bugs['phobos'] = array(
   'cost' => array(
     'deaths' => 0,
     'injuries' => 0,
-    'dollars' => null,
+    'dollars' => 38e6,
+    'ру́бль' => 40e6,
   ),
   'causes' => array(
     'deadline pressure' => 2,
@@ -32,6 +33,11 @@ $Bugs['phobos'] = array(
       'author'    => 'Ralph Hartley <hartley@aic.nrl.navy.mil>',
       'url'       => 'http://catless.ncl.ac.uk/Risks/9.24.html#subj3',
       'reprint'   => 'SCIENCE Vol 245, 8 September 1989 p1045',
+    ),
+    array(
+      'title'     => 'Soviet Ruble Exchange Rate to the US Dollar, for last 35 years',
+      'author'    => 'Google Answers',
+      'url'       => 'http://answers.google.com/answers/threadview?id=325121',
     ),
   ),
 );
