@@ -10,12 +10,11 @@ $Bugs[basename(__FILE__)] = array(
     '== instead of >=' => null,
   ),
   'causes' => array(
-    'edge case' => null,
-    'logic error' => null,
-    'unexpected problem not checked' => null,
-    'overreliance on single engineer' => null,
     'inadequate review' => null,
     'inadequate documentation' => null,
+    'unexpected results undetected' => null,
+    'edge case' => null,
+    'logic error' => null,
   ),
   'result' => array(
     'population breeds unchecked' => 1,
