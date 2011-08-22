@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection" />
 <style>
 body {
-  font: small Arial, Helvetica, sans-serif;
+  font: Arial, Helvetica, sans-serif;
 }
 th { background-color: #eee }
 th, td {
@@ -76,6 +76,59 @@ function tohtml($v)
   }
 }
 
+function cost($c)
+{
+  $cost = array();
+  if ($c['deaths'])
+  {
+    $cost[] = sprintf('%u death%s', $c['deaths'],
+      $c['deaths'] == 1 ? '' : 's');
+  }
+  if (@$c['injuries'])
+  {
+    $cost[] = sprintf('%u injured', $c['injuries']);
+  }
+  if (@$c['lives-at-risk'])
+  {
+    $cost[] = sprintf('%s lives at risk', number_format($c['lives-at-risk']));
+  }
+  # because of the number of years and different currencies, convert all
+  # non-dollar amounts to dollars inside the case studies based on
+  # exchange rate atht the time of the incident
+  if (@$c['dollars'])
+  {
+    $cost[] = sprintf("$%s", number_format($c['dollars']));
+  }
+  if (!@$c['dollars'])
+  {
+    if (@$cost['£'])
+    {
+      $cost[] = sprintf("£%s", number_format($c['£']));
+    }
+  }
+  if (@$c['recalls'])
+  {
+    $cost[] = sprintf("%s recalls", number_format($c['recalls']));
+  }
+if (@$c['remote-vulnerabilities'])
+{
+  $cost[] = sprintf('%s vulnerabilities', number_format($c['remote-vulnerabilities']));
+}
+  if (@$c['delay-years'])
+  {
+    $cost[] = sprintf('%u year delay', $c['delay-years']);
+  }
+  if (@$c['delay-days'])
+  {
+    $cost[] = sprintf("%u day delay", $c['delay-days']);
+  }
+  if (!$cost)
+  {
+    $cost[] = 'unspecified';
+  }
+  return $cost;
+}
+
 /*
  * return inflation-adjusted dollar amount based on original cost and age
  * $when can be in the forms: "Jan 1, 2000", "Jan, 2000", "2000", "2000-2001", "2000-present"
@@ -96,6 +149,9 @@ uasort($Bugs,
   {
     $ac = $a['cost'];
     $bc = $b['cost'];
+    $cmp = @$ac['fiction'] - @$bc['fiction'];
+    if ($cmp)
+      return $cmp;
     $cmp = @$bc['near-thermonuclear-war'] - @$ac['near-thermonuclear-war'];
     if ($cmp)
       return $cmp;
@@ -112,10 +168,20 @@ uasort($Bugs,
     $bcost = inflation(@$bc['dollars'], $b['when']);
     if ($acost != $bcost)
       return $acost > $bcost ? -1 : 1;
+    $cmp = @$bc['recalls'] - @$ac['recalls'];
+    if ($cmp)
+      return $cmp;
+    $cmp = @$bc['delay-years'] - @$ac['delay-years'];
+    if ($cmp)
+      return $cmp;
     $cmp = @$bc['delay-days'] - @$ac['delay-days'];
     if ($cmp)
       return $cmp;
-    return @$a['remote-vulnerabilities'] > @$b['remote-vulnerabilities'] ? -1 : 1;
+    $cmp = @$bc['remote-vulnerabilities'] - @$ac['remote-vulnerabilities'];
+    if ($cmp)
+      return $cmp;
+    $cmp = count($b['result']) - count($a['result']);
+    return $cmp;
   });
 
 ?>
@@ -126,7 +192,7 @@ uasort($Bugs,
   <th>Name
   <th>When
   <th>Cost
-  <th>Result
+  <th>Impact
   <th>Cause(s)
   <th>Industry
   <th>Mitigating Factors
@@ -144,14 +210,7 @@ uasort($Bugs,
 <tr>
   <td><a href="<?= eschtml($bug['refs'][0]['url']) ?>"><?= eschtml($bug['title']) ?></a>
   <td><?= eschtml($bug['when']) ?>
-  <td align="right">
-    <?= $cost['deaths'] ? $cost['deaths'] . ' lives' : '' ?>
-    <?= $cost['injuries'] ? $cost['injuries'] . ' injuries' : '' ?>
-    <?= @$cost['lives-at-risk'] ? number_format($cost['lives-at-risk']) . ' lives at risk' : '' ?>
-    <?= @$cost['delay-days'] ? $cost['delay-days'] . ' day delay' : '' ?>
-    <?= $cost['dollars'] ? '$'.number_format($cost['dollars']) :
-          ($cost['dollars'] === null && !@$cost['deaths'] && !@$cost['injuries'] && !@$cost['lives-at-risk'] && !@$cost['delay-days'] ? '$unspecified' : '') ?>
-    <?= @$cost['£'] ? '£' . number_format($cost['£']) : '' ?>
+  <td align="right"><?= join("<br>\n", cost($cost)) ?>
   <td><?= tohtml($bug['result']) ?>
   <td><?= tohtml($bug['causes']) ?>
   <td><?= eschtml($bug['industry']) ?>
@@ -166,17 +225,22 @@ uasort($Bugs,
 <h2>References</h2>
 
 <ol>
-  <li><a href="http://sunnyday.mit.edu/accidents/space2001.pdf">Systemic Factors in Software-Related Accidents</a> Nancy G. Leveson
+  <li><a href="http://catless.ncl.ac.uk/Risks/">THE RISKS DIGEST</a>
   <li><a href="http://www5.in.tum.de/~huckle/bugse.html">Collection of Software Bugs</a> Prof. Thomas Huckle
-  <li><a href="http://www.cs.tau.ac.il/~nachumd/verify/horror.html">Software Horror Stories</a> Nachum Dershowitz
   <li><a href="http://en.wikipedia.org/wiki/List_of_software_bugs">List of software bugs</a> Wikipedia
+  <li><a href="http://sunnyday.mit.edu/accidents/space2001.pdf">Systemic Factors in Software-Related Accidents</a> Nancy G. Leveson
+  <li><a href="http://www.cs.tau.ac.il/~nachumd/verify/horror.html">Software Horror Stories</a> Nachum Dershowitz
   <li><a href="http://www.rvs.uni-bielefeld.de/publications/compendium/index.html">Computer-Related Incidents with Commercial Aircraft</a> Peter B. Ladkin, Hiroshi Sogame, Jan Hennig
   <li><a href="http://www.wired.com/software/coolapps/news/2005/11/69355?currentPage=all">History's Worst Software Bugs</a> Simson Garfinkel, 2005
   <li><a href="http://www.faqs.org/faqs/space/probe/">Space FAQ - Planetary Probe History</a>
-  <li><a href="http://whiley.org/2010/08/02/infamous-software-failures-in-new-zealand/">Infamous Software Failures in New Zealand</a>
   <li><a href="http://en.wikipedia.org/wiki/Software_bug">Software Bug</a> Wikipedia
-  <li><a href="http://www.docstoc.com/docs/75805555/Application-Security">Bad Software</a> Greg Hoglund
+  <li><a href="http://nvd.nist.gov/home.cfm">National Vulnerability Database</a>
 </ol>
+
+<div style="padding:1em; padding-top:2em; text-align:center">
+<hr>
+Copyright 2011 Ryan Flynn &lt;parseerror@gmail.com&gt;
+</div>
 
 </body>
 </html>
