@@ -17,7 +17,6 @@ $Bugs['flash-crash-2010'] = array(
   ),
   'result' => array(
     'largest one-day point decline in history' => null,
-    'trading curb' => null,
   ),
   'mitigating' => array(
     'losses recovered within 20 minutes' => 1,

@@ -13,6 +13,7 @@ $Bugs['ping-of-death'] = array(
   ),
   'causes' => array(
     'incomplete implementation of complex standard' => 1,
+    'insufficient input validation' => 1,
     'buffer overflow' => 1,
     'non-isolated memory' => 1,
     'inadequate testing' => 1,

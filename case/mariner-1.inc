@@ -29,6 +29,11 @@ $Bugs['mariner-1'] = array(
       'author'    => 'NASA',
       'url'       => 'http://nssdc.gsfc.nasa.gov/nmc/spacecraftDisplay.do?id=MARIN1',
     ),
+    array(
+      'title'     => 'Space FAQ - Planetary Probe History',
+      'author'    => 'Jon Leech <leech@cs.unc.edu>',
+      'url'       => 'http://www.faqs.org/faqs/space/probe/',
+    ),
   ),
 );
 

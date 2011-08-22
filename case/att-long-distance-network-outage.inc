@@ -6,7 +6,7 @@ $Bugs['att-long-distance-network-outage'] = array(
   'when' => 'Jan 15, 1990',
   'industry' => 'communication',
   'result' => array(
-    '9-hour nationwide network outage' => null,
+    '9-hour nationwide network outage' => 1,
     '70 million calls lost' => 1,
   ),
   'cost' => array(
@@ -17,6 +17,7 @@ $Bugs['att-long-distance-network-outage'] = array(
   'causes' => array(
     'inadequate testing' => null,
     'inadequate disaster recovery plan' => null,
+    'networked ripple effect' => 2,
   ),
   'mitigating' => array(
   ),

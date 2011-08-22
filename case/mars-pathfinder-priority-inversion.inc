@@ -7,7 +7,7 @@ $Bugs['mars-pathfinder-priority-inversion'] = array(
   'industry' => 'aerospace',
   'result' => array(
     'hard error' => 1,
-    'reboot cycle' => 1,
+    'reboot loop' => 1,
   ),
   'cost' => array(
     'deaths' => 0,
@@ -16,7 +16,7 @@ $Bugs['mars-pathfinder-priority-inversion'] = array(
     'delay-days' => 1,
   ),
   'causes' => array(
-    'higher data rates than anticipated' => 1,
+    'corner case' => 1, # higher data rates than anticipated
     'priority inversion' => 1,
     'inadequate testing' => 1,
     'error seen in testing' => 1,
@@ -24,6 +24,9 @@ $Bugs['mars-pathfinder-priority-inversion'] = array(
   ),
   'mitigating' => array(
     'built-in logging and remote update features allowed diagnosis and correction ' => null,
+  ),
+  'correction' => array(
+    'enable semaphore prioritiy inheritance' => 1,
   ),
   'refs' => array(
     array(

@@ -19,12 +19,12 @@ $Bugs['sony-psn-breach'] = array(
     'deaths' => 0,
     'injuries' => 0,
     'dollars' => 171e6,
-    '¥' => 14e9,
+    'yen' => 14e9,
     'cc#s' => 12.3e6,
     'accounts' => 77e6,
   ),
   'mitigating' => array(
-    'no verifiable reports of credit card fraud' => 1,
+    'no verifiable reports of credit card fraud (as of Aug 2011)' => 1,
   ),
   'refs' => array(
     array(

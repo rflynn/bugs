@@ -16,9 +16,13 @@ $Bugs['fdiv'] = array(
     'dollars' => 475e6
   ),
   'causes' => array(
+    'incomplete entries in a look-up-table' => 3,
     'off-by-one' => 3,
     'inadequate testing' => 2,
     'complacency' => 4
+  ),
+  'compounding' => array(
+    'miscalculated initial response' => null,
   ),
   'mitigating' => array(
     'actual damages unknown, likely minor' => null,

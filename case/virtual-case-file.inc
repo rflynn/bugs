@@ -16,8 +16,8 @@ $Bugs['virtual-case-file'] = array(
   ),
   'causes' => array(
     'shifting requirements' => 1,
-    'mismanagement' => 1,
     'scope creep' => 1,
+    'mismanagement' => 1,
   ),
   'mitigating' => array(
   ),

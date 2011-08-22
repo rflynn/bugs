@@ -23,7 +23,7 @@ $Bugs['y2k'] = array(
   'mitigating' => array(
     'diagnosed with sufficient lead time' => null,
     'correction effort widely successful' => null,
-    'economic boon for COBOL programmers' => null,
+    'economic boon for COBOL programmers who contributed to the problem in the first place' => null,
   ),
   'refs' => array(
     array(

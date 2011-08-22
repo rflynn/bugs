@@ -9,14 +9,17 @@ $Bugs['prius-brake-problem'] = array(
     '77 incidents' => 1,
     'bad PR' => 1,
     'costly product recall' => 1,
+    'class-action lawsuit' => 1,
   ),
   'cost' => array(
     'deaths' => 0,
     'injuries' => 0,
     'dollars' => null,
+    'recalls' => 100e3,
   ),
   'causes' => array(
     'unspecified software error' => 1,
+    #'complexity' => 3, # regenerative braking involved
   ),
   'refs' => array(
     array(
@@ -29,6 +32,16 @@ $Bugs['prius-brake-problem'] = array(
       'subtitle'  => 'Anti-lock brake software recall',
       'author'    => 'Wikipedia',
       'url'       => 'http://en.wikipedia.org/wiki/2009%E2%80%932011_Toyota_vehicle_recalls#Anti-lock_brake_software_recall',
+    ),
+    array(
+      'title'     => 'NHTSA Tracking Braking Loss on Prius Hybrids',
+      'author'    => 'Ken Zino',
+      'url'       => 'http://www.thedetroitbureau.com/2009/12/nhtsa-tracking-braking-loss-on-prius-hybrids/',
+    ),
+    array(
+      'title'     => 'U.S. Department of Transportation Responds to Third Toyota Recall',
+      'author'    => 'U.S. DOT',
+      'url'       => 'http://www.nhtsa.gov/PR/DOT-25-10',
     ),
   ),
 );

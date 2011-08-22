@@ -18,7 +18,6 @@ $Bugs['soviet-nuclear-missile-false-alarm'] = array(
     'deadline pressure' => 2,
     'faulty signal analysis' => 1, # mistaking sunlight reflecting off clouds for missile launches
     #'highly elliptical satellite orbit' => 1,
-    'unlikely confluence of events' => 1,
     'false positive' => 1,
   ),
   'mitigating' => array(

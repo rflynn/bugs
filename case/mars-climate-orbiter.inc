@@ -13,6 +13,7 @@ $Bugs['mars-climate-orbiter'] = array(
   ),
   'causes' => array(
     'unit conversion' => 2,
+    'error seen in testing' => 2,
     'complacency' => 3,
   ),
   'refs' => array(

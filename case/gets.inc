@@ -8,7 +8,8 @@ $Bugs['gets'] = array(
   'industry' => 'software',
   'result' => array(
     'Morris Worm' => 1,
-    'countless vulnerabilities' => 2,
+    'critical Sendmail vulnerability' => 5,
+    'countless bugs, crashes and vulnerabilities' => 2,
   ),
   'cost' => array(
     'deaths' => 0,
@@ -18,7 +19,9 @@ $Bugs['gets'] = array(
   ),
   'causes' => array(
     'unrealistic risk assessment' => 3,
-    'backwards compatibility' => 2,
+    'lack of a defensive design' => 1,
+    'buffer overflow' => 1,
+    'insufficient input validation' => 1,
   ),
   'refs' => array(
     array(
@@ -40,6 +43,11 @@ $Bugs['gets'] = array(
       'title'     => 'gets()',
       'author'    => 'Wikipedia',
       'url'       => 'http://en.wikipedia.org/wiki/Gets',
+    ),
+    array(
+      'title'     => 'Critical Sendmail Vulnerability',
+      'author'    => 'Tony Bradley',
+      'url'       => 'http://netsecurity.about.com/cs/linuxsecurity/a/aa032203a.htm',
     ),
   ),
 );
