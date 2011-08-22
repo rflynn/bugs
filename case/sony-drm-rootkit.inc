@@ -15,12 +15,13 @@ $Bugs['sony-rootkit'] = array(
     'PR disaster' => 1,
     'product recall' => 1,
     '500,000+ vulnerabilities' => 1,
-    'class-action lawsuit' => 2,
+    'multiple class-action lawsuits' => 2,
   ),
   'cost' => array(
     'deaths' => 0,
     'injuries' => 0,
     'dollars' => 5.75e6,
+    'recalls' => 4e6,
     'remote-vulnerabilities' => 500e3,
   ),
   'compounding' => array(
@@ -36,6 +37,16 @@ $Bugs['sony-rootkit'] = array(
       'title'     => 'Sony BMG copy protection rootkit scandal',
       'author'    => 'Wikipedia',
       'url'       => 'http://en.wikipedia.org/wiki/Sony_BMG_copy_protection_rootkit_scandal',
+    ),
+    array(
+      'title'     => "Sony's DRM Rootkit: The Real Story",
+      'author'    => 'Bruce Shneier',
+      'url'       => 'http://www.schneier.com/blog/archives/2005/11/sonys_drm_rootk.html',
+    ),
+    array(
+      'title'     => 'Sony to pull controversial CDs, offer swap',
+      'author'    => 'Jefferson Graham',
+      'url'       => 'http://www.usatoday.com/money/industries/technology/2005-11-14-sony-cds_x.htm',
     ),
     array(
       'title'     => 'Sony BMG Litigation Info',
