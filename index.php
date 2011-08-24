@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -114,10 +115,10 @@ function cost($c)
   {
     $cost[] = sprintf('%s recalls', number_format($c['recalls']));
   }
-if (@$c['remote-vulnerabilities'])
-{
-  $cost[] = sprintf('%s vulnerabilities', number_format($c['remote-vulnerabilities']));
-}
+  if (@$c['remote-vulnerabilities'])
+  {
+    $cost[] = sprintf('%s vulnerabilities', number_format($c['remote-vulnerabilities']));
+  }
   if (@$c['delay-years'])
   {
     $cost[] = sprintf('%u year delay', $c['delay-years']);
@@ -125,6 +126,10 @@ if (@$c['remote-vulnerabilities'])
   if (@$c['delay-days'])
   {
     $cost[] = sprintf("%u day delay", $c['delay-days']);
+  }
+  if (@$c['dollars-at-risk'])
+  {
+    $cost[] = sprintf('$%s at risk', number_format($c['dollars-at-risk']));
   }
   if (!$cost)
   {
@@ -187,7 +192,13 @@ uasort($Bugs,
     $cmp = @$bc['remote-vulnerabilities'] - @$ac['remote-vulnerabilities'];
     if ($cmp)
       return $cmp;
+    $cmp = @$bc['dollars-at-risk'] - @$ac['dollars-at-risk'];
+    if ($cmp)
+      return $cmp;
     $cmp = count($b['result']) - count($a['result']);
+    if ($cmp)
+      return $cmp;
+    $cmp = strtotime($b['when']) - strtotime($a['when']);
     return $cmp;
   });
 
@@ -195,6 +206,18 @@ uasort($Bugs,
 
 <table style="border-collapse:collapse; border:1px solid #ccc">
 
+<?php
+  $Year = intval(date('Y'));
+  $i = 0;
+  foreach (array_keys($Bugs) as $key)
+  {
+    $bug = $Bugs[$key];
+    $cost = $bug['cost'];
+    $ageyears = $Year - intval($bug['when']);
+    $inflation = pow(1.02, $ageyears);
+
+    if ($i % 10 == 0) {
+?>
 <tr>
   <th>#
   <th>Name
@@ -205,19 +228,10 @@ uasort($Bugs,
   <th>Industry
   <th>Mitigating Factors
 
-<?php
-  $Year = intval(date('Y'));
-  $i = 1;
-  foreach (array_keys($Bugs) as $key)
-  {
-    $bug = $Bugs[$key];
-    $cost = $bug['cost'];
-    $ageyears = $Year - intval($bug['when']);
-    $inflation = pow(1.02, $ageyears);
-?>
+<?php } ?>
 
 <tr>
-  <td width="1" align="right"><?= $i++ ?>
+  <td width="1" align="right"><?= ++$i ?>
   <td><a href="<?= eschtml($bug['refs'][0]['url']) ?>"><?= eschtml($bug['title']) ?></a>
   <td><?= eschtml($bug['when']) ?>
   <td align="right"><?= join("<br>\n", cost($cost)) ?>
@@ -232,17 +246,29 @@ uasort($Bugs,
 
 </table>
 
+<!--
+<h2>Notable Omissions</h2>
+<dl>
+  <dt></dt>
+  <dd>
+  </dd>
+
+  <dt></dt>
+  <dd></dd>
+</dl>
+-->
+
 <h2>References</h2>
 
 <ol>
   <li><a href="http://catless.ncl.ac.uk/Risks/">THE RISKS DIGEST</a> Peter G. Neumann
   <li><a href="http://www5.in.tum.de/~huckle/bugse.html">Collection of Software Bugs</a> Prof. Thomas Huckle
   <li><a href="http://en.wikipedia.org/wiki/List_of_software_bugs">List of software bugs</a> Wikipedia
-  <li><a href="http://sunnyday.mit.edu/accidents/space2001.pdf">Systemic Factors in Software-Related Accidents</a> Nancy G. Leveson
   <li><a href="http://www.cs.tau.ac.il/~nachumd/verify/horror.html">Software Horror Stories</a> Nachum Dershowitz
+  <li><a href="http://sunnyday.mit.edu/accidents/space2001.pdf">Systemic Factors in Software-Related Accidents</a> Nancy G. Leveson
   <li><a href="http://www.rvs.uni-bielefeld.de/publications/compendium/index.html">Computer-Related Incidents with Commercial Aircraft</a> Peter B. Ladkin, Hiroshi Sogame, Jan Hennig
   <li><a href="http://www.wired.com/software/coolapps/news/2005/11/69355?currentPage=all">History's Worst Software Bugs</a> Simson Garfinkel, 2005
-  <li><a href="http://www.faqs.org/faqs/space/probe/">Space FAQ - Planetary Probe History</a>
+  <li><a href="http://www.faqs.org/faqs/space/probe/">Space FAQ - Planetary Probe History</a> Jon Leech
   <li><a href="http://en.wikipedia.org/wiki/Software_bug">Software Bug</a> Wikipedia
   <li><a href="http://nvd.nist.gov/home.cfm">National Vulnerability Database</a>
 </ol>
