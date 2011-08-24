@@ -23,7 +23,7 @@ $Bugs['soviet-nuclear-missile-false-alarm'] = array(
   'mitigating' => array(
     'secondary sources of information' => 1,
     'human in the loop' => 1,
-    'reason' => 1,
+    'false alarm correctly interpreted' => 1,
   ),
   'refs' => array(
     array(

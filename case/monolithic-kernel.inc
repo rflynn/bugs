@@ -34,6 +34,22 @@ $Bugs['monolithic-kernel'] = array(
       'url'       => 'http://en.wikipedia.org/wiki/Microkernel',
     ),
     array(
+      'title'     => 'Kernel',
+      'subtitle'  => 'Monolithic kernel vs. microkernels',
+      'author'    => 'Wikipedia',
+      'url'       => 'http://en.wikipedia.org/wiki/Kernel_(computer_science)#Monolithic_kernels_vs._microkernels',
+    ),
+    array(
+      'title'     => 'Tanenbaum-Torvalds debate',
+      'author'    => 'Wikipedia',
+      'url'       => 'http://en.wikipedia.org/wiki/Tanenbaum%E2%80%93Torvalds_debate',
+    ),
+    array(
+      'title'     => 'LINUX is obsolete',
+      'author'    => 'Andrew Tanenbaum',
+      'url'       => 'http://groups.google.com/group/comp.os.minix/browse_thread/thread/c25870d7a41696d2/f447530d082cd95d?tvc=2&pli=1',
+    ),
+    array(
       'title'     => 'Intel Core (microarchitecture)',
       'author'    => 'Wikipedia',
       'url'       => 'http://en.wikipedia.org/wiki/Core_(microarchitecture)',

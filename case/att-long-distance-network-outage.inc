@@ -16,7 +16,7 @@ $Bugs['att-long-distance-network-outage'] = array(
   ),
   'causes' => array(
     'inadequate testing' => null,
-    'inadequate disaster recovery plan' => null,
+    'inadequate disaster recovery' => null,
     'networked ripple effect' => 2,
   ),
   'mitigating' => array(

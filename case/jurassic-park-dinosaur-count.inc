@@ -10,9 +10,11 @@ $Bugs[basename(__FILE__)] = array(
     '== instead of >=' => null,
   ),
   'causes' => array(
+    'inadequate disaster recovery' => null,
     'inadequate review' => null,
     'inadequate documentation' => null,
     'unexpected results undetected' => null,
+    'corner case' => null,
     'edge case' => null,
     'logic error' => null,
   ),
@@ -29,6 +31,7 @@ $Bugs[basename(__FILE__)] = array(
   'mitigating' => array(
     'fictional' => 1,
     'entertaining' => 1,
+    'involves dinosaurs' => 1,
   ),
   'refs' => array(
     array(

@@ -20,7 +20,7 @@ $Bugs[basename(__FILE__)] = array(
       5e6 /* interest */,
   ),
   'causes' => array(
-    'inadequate disaster recovery plan' => null,
+    'inadequate disaster recovery' => null,
     'inadequate testing' => null,
     'unspecified software error' => 1,
   ),

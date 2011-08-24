@@ -2,28 +2,41 @@
 # ex: set ts=2 et:
 
 $Bugs['uss-yorktown-div-0'] = array(
-  'title' => 'USS Yorktown ',
-  'when' => '1996',
+  'title' => 'USS Yorktown',
+  'when' => 'Sep, 1996',
   'industry' => 'military',
-  'summary' => '',
+  'summary' => <<<EOS
+
+EOS
+,
   'result' => array(
-    'propulsion systems failure' => 1,
-    'towed back to base' => 2,
+    'complete systems crash' => 1,
+    'propulsion system failure' => 1,
+    'ship disabled' => 1,
   ),
   'cost' => array(
     'deaths' => 0,
     'injuries' => 0,
     'dollars' => null,
     'lives-at-risk' => 400,
+    'delay-days' => 2,
   ),
   'causes' => array(
-    'edge case' => 1,
-    'insufficient input validation' => 1,
     'lack of defensive design' => 1,
+    'inadequate training' => 1,
+    'insufficient input validation' => 1,
+    'edge case' => 1,
     'divide by zero' => 1,
   ),
   'mitigating' => array(
     'entering non-zero solves problem' => 2,
+  ),
+  'compounding' => array(
+    'multiple occureances' => 2,
+  ),
+  'correction' => array(
+    'additional training' => 2,
+    "don't do that" => 2,
   ),
   'refs' => array(
     array(

@@ -17,10 +17,11 @@ $Bugs[basename(__FILE__)] = array(
   'causes' => array(
     'scope creep' => 1,
     'corrupted data' => 1,
-    'blank warning message used in production for testing' => 1,
+    'test message was a blank attack warning message' => 1,
   ),
   'mitigating' => array(
     'error produced very high "garbage" incoming missile count' => 1,
+    'secondary sources of information' => 1,
     'humans in the loop' => 1,
     'false alarm correctly interpreted' => 1,
   ),
@@ -28,7 +29,7 @@ $Bugs[basename(__FILE__)] = array(
     'message tracing' => 1,
     'output verification' => 1,
     'human in the loop' => 1,
-    'reformat ambiguous testing message' => 1,
+    'reformat confusing test message' => 1,
   ),
   'refs' => array(
     array(
