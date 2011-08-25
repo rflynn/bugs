@@ -249,8 +249,22 @@ uasort($Bugs,
 <!--
 <h2>Notable Omissions</h2>
 <dl>
-  <dt></dt>
+  <dt><a href="http://www.eng.uab.edu/cee/faculty/ndelatte/case_studies_project/Hartford%20Civic%20Center/hartford.htm">Hartford Civic Center Arena Roof Collapse</a></dt>
   <dd>
+    Though a CAD program gave improper results and thus a false sense of security to a flawed design,
+    this is foremost an engineering and construction failure.
+  </dd>
+
+  <dt>CIA Software Sabotage Damages Soviet Trans-Siberian Gas Pipeline</dt>
+  <dd>
+    Though software was involved and the results are disastrous the software worked as intended (by the CIA).
+    There are few lessons to be learned here other than "test your software" and "don't fuck with the CIA".
+  </dd>
+
+  <dt>'Black Monday' 1987 Wall Street Crash</dt>
+  <dd>
+      Though <a href="http://en.wikipedia.org/wiki/Black_Monday_(1987)#Causes">trading software has been a scapegoat for the 1987 Wall Street Crash in the U.S.</a>,
+      the international chain of events suggests there was more going on.
   </dd>
 
   <dt></dt>
