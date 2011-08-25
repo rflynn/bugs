@@ -16,10 +16,10 @@ $Bugs['fdiv'] = array(
     'dollars' => 475e6
   ),
   'causes' => array(
-    'incomplete entries in a look-up-table' => 3,
-    'off-by-one' => 3,
     'inadequate testing' => 2,
-    'complacency' => 4
+    'off-by-one' => 3,
+    'incomplete entries in a look-up-table' => 3,
+    'complacent response' => 4
   ),
   'compounding' => array(
     'miscalculated initial response' => null,

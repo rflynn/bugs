@@ -10,10 +10,11 @@ $Bugs[basename(__FILE__)] = array(
     '== instead of >=' => null,
   ),
   'causes' => array(
+    'overreliance on automation' => null,
     'inadequate disaster recovery' => null,
-    'inadequate review' => null,
+    'insufficient review' => null,
     'inadequate documentation' => null,
-    'unexpected results undetected' => null,
+    'unexpected results ignored' => null,
     'corner case' => null,
     'edge case' => null,
     'logic error' => null,

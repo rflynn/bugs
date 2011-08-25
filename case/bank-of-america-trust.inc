@@ -25,8 +25,8 @@ $Bugs[basename(__FILE__)] = array(
   ),
   'causes' => array(
     'inadequate planning' => 2,
-    'inadequate disaster recovery' => 2,
     'inadequate testing' => 2,
+    'inadequate disaster recovery' => 2,
   ),
   'mitigating' => array(
   ),

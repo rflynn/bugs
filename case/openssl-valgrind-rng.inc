@@ -16,10 +16,10 @@ $Bugs['openssl-valgrind-rng'] = array(
     'remote-vulnerabilities' => 1e6
   ),
   'causes' => array(
-    'overreliance on automation' => 1,
-    'only following orders' => 1,
     'insufficient review' => 1,
     'improper testing' => 1,
+    'overreliance on automation' => 1,
+    'only following orders' => 1,
   ),
   'mitigating' => array(
     'non-trivial to exploit' => 1,

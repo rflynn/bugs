@@ -7,9 +7,9 @@ $Bugs['sony-rootkit'] = array(
   'industry' => 'entertainment',
   'summary' => 'In the face of falling CD sales and increasing online media piracy in the early 2000s Sony purchased, stole and assembled software components into a Microsoft Windows-specific rootkit and installed it on 50 CDs, infecting any Windows system they were inserted',
   'causes' => array(
-    'attempting to protect antiquated delivery model' => null,
     'assymetric response to perceived threat' => null,
-    'killing the messenger' => null,
+    'hurt legitimate customers the most' => null,
+    'fix made problem worse' => null,
   ),
   'result' => array(
     'PR disaster' => 1,

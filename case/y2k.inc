@@ -1,7 +1,7 @@
 <?php
 # ex: set ts=2 et:
 
-$Bugs['y2k'] = array(
+$Bugs[basename(__FILE__)] = array(
   'title' => 'Y2K',
   'when' => 'Jan 1, 2000',
   'industry' => 'business',
@@ -27,6 +27,8 @@ $Bugs['y2k'] = array(
     'economic boon for COBOL programmers who contributed to the problem in the first place' => null,
   ),
   'compounding' => array(
+  ),
+  'correction' => array(
   ),
   'refs' => array(
     array(

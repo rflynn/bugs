@@ -16,7 +16,7 @@ $Bugs[basename(__FILE__)] = array(
     'delay-years' => 8,
   ),
   'causes' => array(
-    'unexpected data considered anomolous' => null,
+    'unexpected results ignored' => null,
     'edge case' => null,
   ),
   'mitigating' => array(

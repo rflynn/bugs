@@ -25,7 +25,7 @@ $Bugs['hms-sheffield-friendly-missile'] = array(
     array(
       'title'     => 'HMS Sheffield',
       'author'    => 'Wikipedia',
-      'url'       => 'http://en.wikipedia.org/wiki/Year_2000_problem',
+      'url'       => 'http://en.wikipedia.org/wiki/HMS_Sheffield_(D80)',
     ),
     array(
       'title'     => 'HMS Sheffield Thought Exocet was Friendly',

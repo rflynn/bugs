@@ -3,7 +3,7 @@
 
 $Bugs['cassini-huygens-radio'] = array(
   'title' => 'Cassini-Huygens Radio',
-  'when' => '?',
+  'when' => '1998-2004',
   'industry' => 'aerospace',
   'summary' => '',
   'result' => array(
@@ -16,10 +16,10 @@ $Bugs['cassini-huygens-radio'] = array(
     'dollars-at-risk' => 300e6,
   ),
   'causes' => array(
-    'not full disclosure between parties' => 1,
-    'inappropriate use of off-the-shelf component' => 1,
-    'reviewers missed the problem' => 1,
     'inadequate testing' => 1,
+    'inappropriate use of off-the-shelf component' => 1,
+    'not full disclosure between parties' => 1,
+    'reviewers missed the problem' => 1,
   ),
   'mitigating' => array(
     'lone, persistent hero diagnosed bug in time' => 1,

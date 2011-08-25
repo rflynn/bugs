@@ -12,9 +12,9 @@ $Bugs['f00f'] = array(
     'dollars' => 500e6
   ),
   'causes' => array(
-    'halt and catch fire' => 1,
-    'overreliance on automation' => 3,
     'inadequate testing' => 1,
+    'overreliance on automation' => 3,
+    'halt and catch fire' => 1,
   ),
   'mitigating' => array(
     'OS defensive efforts successful' => null,
