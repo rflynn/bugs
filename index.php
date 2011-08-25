@@ -19,6 +19,7 @@ th, td {
 th { border-color: #fff }
 td ul {
   list-style: none;
+  margin-top: 0;
   margin-bottom: 0;
   font-size: smaller;
   padding-left: 1em;
@@ -208,6 +209,7 @@ uasort($Bugs,
 
 <?php
   $Year = intval(date('Y'));
+  $bugcnt = count($Bugs);
   $i = 0;
   foreach (array_keys($Bugs) as $key)
   {
@@ -216,7 +218,7 @@ uasort($Bugs,
     $ageyears = $Year - intval($bug['when']);
     $inflation = pow(1.02, $ageyears);
 
-    if ($i % 10 == 0) {
+    if ($i % 10 == 0 && $i < $bugcnt) {
 ?>
 <tr>
   <th>#
