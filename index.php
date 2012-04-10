@@ -33,7 +33,9 @@ td ul li:before {
 
 <body>
 
-<h1><img src="/images/icons/bug.gif"> Software Engineering Disaster Hall of Fame</h1>
+<h1>
+<img border="0" alt="" title="" src="data:image/gif;base64,R0lGODlhEAAQAMIEAAACADk6V0WWj7PT8P///////////////yH5BAEKAAQALAAAAAAQABAAAANESEqx/gu4BuOEAejcZFXAMAAc401DIIiCFzQZuIqDQDkASdNtFfCs2AQwS9UkL4uKFrotOirBivS4cUiqD+GkfXYv2gQAOw==">
+Software Engineering Disaster Hall of Fame</h1>
 <h3>Compiled by Ryan Flynn</h3>
 
 <?php
@@ -253,7 +255,7 @@ uasort($Bugs,
 <dl>
   <dt><a href="http://www.eng.uab.edu/cee/faculty/ndelatte/case_studies_project/Hartford%20Civic%20Center/hartford.htm">Hartford Civic Center Arena Roof Collapse</a></dt>
   <dd>
-    Though a CAD program gave improper results and thus a false sense of security to a flawed design,
+    Though a CAD program gave improper results and thus lent a false sense of security to a flawed design,
     this is foremost an engineering and construction failure.
   </dd>
 
