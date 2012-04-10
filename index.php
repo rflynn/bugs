@@ -40,20 +40,26 @@ Software Engineering Disaster Hall of Fame</h1>
 
 <?php
 
-error_reporting(E_ALL);
+error_reporting(-1);
 
 $cases =
   array_filter(
     scandir('./case/'),
     function ($f)
     {
-      return preg_match('/\.inc$/', $f);
+      return preg_match('/\.json$/', $f);
     });
+
+$Bugs = array();
 
 foreach ($cases as $case)
 {
   $path = "case/$case";
-  @include_once($path);
+  $json = file_get_contents($path);
+  $data = json_decode($json, true);
+  if (!$data)
+    echo json_last_error();
+  $Bugs[basename($case, '.json')] = $data;
 }
 
 function eschtml($str)
@@ -101,14 +107,10 @@ function cost($c)
   # exchange rate atht the time of the incident
   if (@$c['dollars'])
   {
-    $cost[] = sprintf('$%s', number_format($c['dollars']));
-  }
-  if (!@$c['dollars'])
-  {
-    if (@$cost['£'])
-    {
-      $cost[] = sprint('"£', number_format($c['£']));
-    }
+    $d = dollars($c);
+    $cost[] = sprintf('$%s', number_format($d));
+  } else if (@$c['£']) {
+    $cost[] = sprint('"£', number_format($c['£']));
   }
   if (@$c['jobs'])
   {
@@ -156,6 +158,14 @@ function inflation($dollars, $when)
   return $dollars * $factor;
 }
 
+function dollars($a)
+{
+    $dollars = @$a['dollars'];
+    if (is_array($dollars))
+        $dollars = array_sum(array_values($dollars));
+    return $dollars;
+}
+
 uasort($Bugs,
   function ($a, $b)
   {
@@ -176,8 +186,8 @@ uasort($Bugs,
     $cmp = @$bc['lives-at-risk'] - @$ac['lives-at-risk'];
     if ($cmp)
       return $cmp;
-    $acost = inflation(@$ac['dollars'], $a['when']);
-    $bcost = inflation(@$bc['dollars'], $b['when']);
+    $acost = inflation(dollars($ac), $a['when']);
+    $bcost = inflation(dollars($bc), $b['when']);
     if ($acost != $bcost)
       return $acost > $bcost ? -1 : 1;
     $cmp = @$bc['jobs'] - @$ac['jobs'];

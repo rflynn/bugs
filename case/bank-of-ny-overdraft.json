@@ -1,0 +1,37 @@
+{
+  "title" : "Bank of New York Overdraft",
+  "when" : "Dec 13, 1985",
+  "industry" : "financial",
+  "summary" : "",
+  "result" : {
+    "32,000 transactions corrupted" : 1,
+    "$23.6B loan required" : 1,
+    "90 minute service disruption" : 1,
+    "reputation damaged" : 1
+  },
+  "cost" : {
+    "deaths" : 0,
+    "injuries" : 0,
+    "dollars" : {
+      "original mistake": 32e9,
+      "interest": 5e6
+    }
+  },
+  "causes" : {
+    "inadequate disaster recovery" : null,
+    "inadequate testing" : null,
+    "unspecified software error" : 1
+  },
+  "mitigating" : {
+  },
+  "refs" : [
+    {
+      "title"     : "Computer Snarled N.Y. Bank",
+      "subtitle"  : "$32 Billion Overdraft Resulted From Snafu",
+      "author"    : "John M. Berry",
+      "url"       : "http://catless.ncl.ac.uk/Risks/1.31.html#subj4",
+      "reprint"   : "Washington Post, 13 December 1985, p. D7"
+    }
+  ]
+}
+
