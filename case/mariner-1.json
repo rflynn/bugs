@@ -1,0 +1,39 @@
+{
+  "title" : "Mariner-1",
+  "when" : "Jul 22, 1962",
+  "industry" : "aerospace",
+  "result" : "rocket/satellite loss",
+  "cost" : {
+    "deaths" : 0,
+    "injuries" : 0,
+    "dollars" : 18.5e6
+  },
+  "causes" : {
+    "transcription error" : 1,
+    "deadline pressure" : 1,
+    "inadequate testing" : 1
+  },
+  "inaccuracies" : "Although the bug is sometimes claimed to have been an incorrect FORTRAN DO statement, this is not correct. FORTRAN was not in use.",
+  "refs" : [
+    {
+      "title"     : "Mariner 1",
+      "author"    : "Wikipedia",
+      "url"       : "http://en.wikipedia.org/wiki/Mariner_1"
+    },
+    {
+      "title"     : "Mariner 1",
+      "author"    : "NASA",
+      "url"       : "http://nssdc.gsfc.nasa.gov/nmc/spacecraftDisplay.do?id=MARIN1"
+    },
+    {
+      "title"     : "Space FAQ - Planetary Probe History",
+      "author"    : "Jon Leech <leech@cs.unc.edu>",
+      "url"       : "http://www.faqs.org/faqs/space/probe/"
+    },
+    {
+      "title"     : "20 Famous Software Disasters",
+      "pub"       : "DevTopics.com",
+      "url"       : "http://www.devtopics.com/20-famous-software-disasters/"
+    }
+  ]
+}

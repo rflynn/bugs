@@ -1,0 +1,37 @@
+{
+  "title" : "Mars Polar Lander",
+  "when" : "Jan 3, 1999",
+  "industry" : "aerospace",
+  "result" : "satellite loss",
+  "cost" : {
+    "deaths" : 0,
+    "injuries" : 0,
+    "dollars" : 150e6
+  },
+  "causes" : {
+    "faulty signal analysis" : 3,
+    "unnecessary complexity" : 3
+  },
+  "refs" : [
+    {
+      "title"     : "Mars Polar Lander",
+      "author"    : "Wikipedia",
+      "url"       : "http://en.wikipedia.org/wiki/Mars_Polar_Lander"
+    },
+    {
+      "title"     : "Mars Climate Orbiter/Mars Polar Lander - Mission Overview",
+      "author"    : "NASA",
+      "url"       : "http://mars.jpl.nasa.gov/msp98/mission_overview.html"
+    },
+    {
+      "title"     : "The Role of Software in Recent Aerospace Accidents",
+      "author"    : "Nancy G. Leveson",
+      "url"       : "http://sunnyday.mit.edu/accidents/issc01.pdf"
+    },
+    {
+      "title"     : "Mars Polar Lander: Clues From the Crash Site",
+      "author"    : "NASA",
+      "url"       : "http://www.space.com/1153-mars-polar-lander-clues-crash-site.html"
+    }
+  ]
+}

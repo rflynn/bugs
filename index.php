@@ -91,8 +91,9 @@ function cost($c)
   $cost = array();
   if ($c['deaths'])
   {
-    $cost[] = sprintf('%u death%s', $c['deaths'],
-      $c['deaths'] == 1 ? '' : 's');
+    $cost[] = sprintf('%u death%s',
+                $c['deaths'],
+                $c['deaths'] == 1 ? '' : 's');
   }
   if (@$c['injuries'])
   {
@@ -110,7 +111,9 @@ function cost($c)
     $d = dollars($c);
     $cost[] = sprintf('$%s', number_format($d));
   } else if (@$c['£']) {
-    $cost[] = sprint('"£', number_format($c['£']));
+    $cost[] = sprintf('£%s', number_format($c['£']));
+  } else if (@$c['€']) {
+    $cost[] = sprintf('€%s', number_format($c['€']));
   }
   if (@$c['jobs'])
   {
