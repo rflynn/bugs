@@ -1,7 +1,7 @@
 <?php
 # ex: set ts=2 et:
 
-$Bugs['ariane-5-flight-501.inc'] = array(
+$Bugs[basename(__FILE__)] = array(
   'title' => 'Ariane 5 Flight 501',
   'when' => 'June 4, 1996',
   'industry' => 'aerospace',
@@ -14,6 +14,7 @@ $Bugs['ariane-5-flight-501.inc'] = array(
   'causes' => array(
     'improper conversion' => 1,
     'arithmetic overflow' => 1,
+    'safety checks disabled' => null,
     'overreliance on automation' => 3,
   ),
   'refs' => array(
