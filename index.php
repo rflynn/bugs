@@ -34,7 +34,7 @@ td ul li:before {
 <body>
 
 <h1>
-<img border="0" alt="" title="" src="data:image/gif;base64,R0lGODlhEAAQAMIEAAACADk6V0WWj7PT8P///////////////yH5BAEKAAQALAAAAAAQABAAAANESEqx/gu4BuOEAejcZFXAMAAc401DIIiCFzQZuIqDQDkASdNtFfCs2AQwS9UkL4uKFrotOirBivS4cUiqD+GkfXYv2gQAOw==">
+<img border="0" width="32" height="32" style="vertical-align:text-bottom" alt="" title="" src="data:image/gif;base64,R0lGODlhEAAQAMIEAAACADk6V0WWj7PT8P///////////////yH5BAEKAAQALAAAAAAQABAAAANESEqx/gu4BuOEAejcZFXAMAAc401DIIiCFzQZuIqDQDkASdNtFfCs2AQwS9UkL4uKFrotOirBivS4cUiqD+GkfXYv2gQAOw==">
 Software Engineering Disaster Hall of Fame</h1>
 <h3>Compiled by Ryan Flynn</h3>
 
