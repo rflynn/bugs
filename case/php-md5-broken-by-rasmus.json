@@ -1,0 +1,30 @@
+{
+  "title" : "PHP Creator Breaks MD5 to Satisfy Static Analyzer",
+  "when" : "Aug 7 15:38:36 2011 UTC",
+  "industry" : "software",
+  "summary" : "",
+  "result" : {
+  },
+  "causes" : {
+    "only following orders" : null,
+    "inadequate testing" : null
+  },
+  "cost" : {
+    "deaths" : 0,
+    "injuries" : 0,
+    "dollars" : null,
+    "bad PR" : 1
+  },
+  "mitigating" : {
+  },
+  "compounding" : {
+    "broken unit tests ignored" : null
+  },
+  "refs" : [
+    {
+      "title"     : "Make static analyzers happy",
+      "author"    : "Rasmus Lerdorf",
+      "url"       : "http://svn.php.net.nyud.net/viewvc/php/php-src/trunk/ext/standard/php_crypt_r.c?r1=313615&r2=314434&pathrev=315218"
+    }
+  ]
+}

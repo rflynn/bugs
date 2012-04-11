@@ -114,6 +114,8 @@ function cost($c)
     $cost[] = sprintf('£%s', number_format($c['£']));
   } else if (@$c['€']) {
     $cost[] = sprintf('€%s', number_format($c['€']));
+  } else if (@$c['AUD']) {
+    $cost[] = sprintf('AUD%s', number_format($c['AUD']));
   }
   if (@$c['jobs'])
   {

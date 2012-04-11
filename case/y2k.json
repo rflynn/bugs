@@ -1,0 +1,37 @@
+{
+  "title" : "Y2K",
+  "when" : "Jan 1, 2000",
+  "industry" : "business",
+  "summary" : "",
+  "result" : {
+    "large-scale engineering effort" : null,
+    "widespread problems" : null
+  },
+  "causes" : {
+    "short-sighted temporal requirements" : null,
+    "premature optimization" : null,
+    "arithmetic overflow" : null
+  },
+  "cost" : {
+    "deaths" : 0,
+    "injuries" : 0,
+    "dollars" : 300e9
+  },
+  "mitigating" : {
+    "most problems were minor" : null,
+    "diagnosed with sufficient lead time" : null,
+    "correction effort widely successful" : null,
+    "economic boon for COBOL programmers who contributed to the problem in the first place" : null
+  },
+  "compounding" : {
+  },
+  "correction" : {
+  },
+  "refs" : [
+    {
+      "title"     : "Year 2000 Problem",
+      "author"    : "Wikipedia",
+      "url"       : "http://en.wikipedia.org/wiki/Year_2000_problem"
+    }
+  ]
+}
