@@ -9,23 +9,16 @@ $Bugs['iran-655'] = array(
   'cost' => array(
     'deaths' => 290,
     'injuries' => 0,
-    'dollars' => 0
+    'dollars' => null,
   ),
   'causes' => array(
-    'incorrect radio frequency for contact',
+    'incorrect radio frequency for contact' => 1,
   ),
   'refs' => array(
     array(
-      'title'     => "1983 Soviet nuclear false alarm incident",
-      'subtitle'  => '',
+      'title'     => "",
       'author'    => 'Wikipedia',
-      'url'       => 'http://en.wikipedia.org/wiki/1983_Soviet_nuclear_false_alarm_incident',
-    ),
-    array(
-      'title'     => "'I Had A Funny Feeling in My Gut'",
-      'subtitle'  => '',
-      'author'    => 'David Hoffman',
-      'url'       => 'http://www.washingtonpost.com/wp-srv/inatl/longterm/coldwar/shatter021099b.htm',
+      'url'       => '',
     ),
   ),
 );

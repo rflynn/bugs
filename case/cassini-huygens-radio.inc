@@ -28,6 +28,7 @@ $Bugs['cassini-huygens-radio'] = array(
   'compounding' => array(
     'simple fix on the ground' => 1,
     'fix not possible while deployed' => 1,
+    "bug wouldn't manifest for 7 years" => 1,
   ),
   'workaround' => <<<EOS
 From a variety of proposed fixes, the Cassini team crafted a response plan that centered on reducing the Doppler shift sufficiently to keep the data signal within the recognition range of the receiver. They accomplished this trick by altering the planned trajectory of Cassini. Now, Cassini will be much farther from Titan when Huygens enters its atmosphere. As a result of this geometrical rearrangement, the probe's major deceleration component will be perpendicular to the Huygens-Cassini line of sight rather than mostly along it. This simple change literally sidesteps the Doppler shift problem, as the radio waves coming out perpendicular to Huygens's direction of motion will be neither stretched nor compressed.

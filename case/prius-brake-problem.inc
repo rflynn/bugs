@@ -14,7 +14,7 @@ $Bugs['prius-brake-problem'] = array(
   'cost' => array(
     'deaths' => 0,
     'injuries' => 0,
-    'dollars' => null,
+    'dollars' => 160e6,
     'recalls' => 100e3,
   ),
   'causes' => array(
@@ -42,6 +42,11 @@ $Bugs['prius-brake-problem'] = array(
       'title'     => 'U.S. Department of Transportation Responds to Third Toyota Recall',
       'author'    => 'U.S. DOT',
       'url'       => 'http://www.nhtsa.gov/PR/DOT-25-10',
+    ),
+    array(
+      'title'     => "Experts: Price of Toyota's troubles will soar",
+      'author'    => 'Hans Greimel <hgreimel@crain.com>',
+      'url'       => 'http://www.autonews.com/apps/pbcs.dll/article?AID=/20100412/RETAIL02/304129969/1316/mobile&template=art4',
     ),
   ),
 );

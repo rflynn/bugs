@@ -2,7 +2,7 @@
 # ex: set ts=2 et:
 
 $Bugs[basename(__FILE__)] = array(
-  'title' => 'Excel 2007 Display Bug',
+  'title' => "Excel '65535' Display Bug",
   'when' => '2007',
   'industry' => 'software',
   'summary' => '',

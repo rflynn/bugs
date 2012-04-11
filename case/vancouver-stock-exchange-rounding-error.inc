@@ -3,7 +3,7 @@
 
 $Bugs[basename(__FILE__)] = array(
   'title' => 'Vancouver Stock Exchange Rounding Error',
-  'when' => '1984',
+  'when' => '1982-1984',
   'industry' => 'financial',
   'summary' => 'An egregious example of roundoff error is provided by a short-lived index devised at the Vancouver stock exchange (McCullough and Vinod 1999). At its inception in 1982, the index was given a value of 1000.000. After 22 months of recomputing the index and truncating to three decimal places at each change in market value, the index stood at 524.881, despite the fact that its "true" value should have been 1009.811.',
   'explain' => <<<EOS

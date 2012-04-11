@@ -8,8 +8,8 @@ $Bugs[basename(__FILE__)] = array(
   'summary' => '',
   'result' => array(
     'new system never worked' => null,
-    'trust group dissolved' => 1,
     'accounts transferred to other banks' => null,
+    'entire group lost jobs' => 1,
   ),
   'cost' => array(
     'deaths' => 0,

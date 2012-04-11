@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <title>Software Engineering Disaster Hall of Fame</title>
@@ -7,6 +7,7 @@
   <meta name="description" content="" />
   <meta name="keywords" content="bug, software, programming, disaster, famous, fame, hall, shame" />
   <link rel="stylesheet" href="/css/style.css" type="text/css" media="screen, projection" />
+  <link rel="shortcut icon" href="bug.ico">
 <style>
 body {
   font: Arial, Helvetica, sans-serif;
@@ -33,12 +34,18 @@ td ul li:before {
 
 <body>
 
-<h1><img src="/images/icons/bug.gif"> Software Engineering Disaster Hall of Fame</h1>
-<h3>Compiled by Ryan Flynn</h3>
-
 <?php
 
 error_reporting(E_ALL);
+
+@include_once('../util.inc');
+
+?>
+
+<h1>Software Engineering Disaster Hall of Fame</h1>
+<h3>Compiled by Ryan Flynn</h3>
+
+<?php
 
 $cases =
   array_filter(
@@ -124,13 +131,13 @@ function cost($c)
   {
     $cost[] = sprintf('%u year delay', $c['delay-years']);
   }
-  if (@$c['delay-days'])
-  {
-    $cost[] = sprintf("%u day delay", $c['delay-days']);
-  }
   if (@$c['dollars-at-risk'])
   {
     $cost[] = sprintf('$%s at risk', number_format($c['dollars-at-risk']));
+  }
+  if (@$c['delay-days'])
+  {
+    $cost[] = sprintf("%u day delay", $c['delay-days']);
   }
   if (!$cost)
   {
@@ -187,13 +194,13 @@ uasort($Bugs,
     $cmp = @$bc['delay-years'] - @$ac['delay-years'];
     if ($cmp)
       return $cmp;
+    $cmp = @$bc['dollars-at-risk'] - @$ac['dollars-at-risk'];
+    if ($cmp)
+      return $cmp;
     $cmp = @$bc['delay-days'] - @$ac['delay-days'];
     if ($cmp)
       return $cmp;
     $cmp = @$bc['remote-vulnerabilities'] - @$ac['remote-vulnerabilities'];
-    if ($cmp)
-      return $cmp;
-    $cmp = @$bc['dollars-at-risk'] - @$ac['dollars-at-risk'];
     if ($cmp)
       return $cmp;
     $cmp = count($b['result']) - count($a['result']);
@@ -214,6 +221,10 @@ uasort($Bugs,
   foreach (array_keys($Bugs) as $key)
   {
     $bug = $Bugs[$key];
+    if (@$bug['omit'] === true)
+    {
+      continue;
+    }
     $cost = $bug['cost'];
     $ageyears = $Year - intval($bug['when']);
     $inflation = pow(1.02, $ageyears);
@@ -234,12 +245,18 @@ uasort($Bugs,
 
 <tr>
   <td width="1" align="right"><?= ++$i ?>
+
   <td><a href="<?= eschtml($bug['refs'][0]['url']) ?>"><?= eschtml($bug['title']) ?></a>
   <td><?= eschtml($bug['when']) ?>
+
   <td align="right"><?= join("<br>\n", cost($cost)) ?>
+
   <td><?= tohtml($bug['result']) ?>
+
   <td><?= tohtml($bug['causes']) ?>
+
   <td><?= eschtml($bug['industry']) ?>
+
   <td><?= tohtml(@$bug['mitigating']) ?>
 
 <?php
@@ -248,31 +265,43 @@ uasort($Bugs,
 
 </table>
 
-<!--
 <h2>Notable Omissions</h2>
+<h4>Oft-cited incidents that didn't make the cut</h4>
 <dl>
+
+  <dt><a href="http://en.wikipedia.org/wiki/Siberian_pipeline_sabotage">Soviet Trans-Siberian Gas Pipeline Sabotage by CIA Via Software</a></dt>
+  <dd>
+    Though software was involved and the results are disastrous the software worked as intended (by the CIA).
+    There are few lessons to be learned here other than "test your software" and "don't fuck with the CIA".
+  </dd>
+
+  <dt><a href="http://en.wikipedia.org/wiki/Black_Monday_(1987)">'Black Monday' 1987 Wall Street Crash</a></dt>
+  <dd>
+      Though <a href="http://en.wikipedia.org/wiki/Black_Monday_(1987)#Causes">trading software has been a scapegoat for the 1987 Wall Street Crash in the U.S.</a>,
+      the international chain of events suggests there was more going on.
+  </dd>
+
+  <dt><a href="http://en.wikipedia.org/wiki/Stuxnet">Sabotage of Iranian Nuclear Program by Stuxnet Worm</a></dt>
+  <dd>
+  This is industrial sabotage and computer warfare, note-worthy in itself, but not an egregious engineering failure by itself &mdash; the attack was highly
+  targeted and sophisticated.
+  </dd>
+
   <dt><a href="http://www.eng.uab.edu/cee/faculty/ndelatte/case_studies_project/Hartford%20Civic%20Center/hartford.htm">Hartford Civic Center Arena Roof Collapse</a></dt>
   <dd>
     Though a CAD program gave improper results and thus a false sense of security to a flawed design,
     this is foremost an engineering and construction failure.
   </dd>
 
-  <dt>CIA Software Sabotage Damages Soviet Trans-Siberian Gas Pipeline</dt>
+  <dt><a href=""></a></dt>
   <dd>
-    Though software was involved and the results are disastrous the software worked as intended (by the CIA).
-    There are few lessons to be learned here other than "test your software" and "don't fuck with the CIA".
   </dd>
 
-  <dt>'Black Monday' 1987 Wall Street Crash</dt>
+  <dt><a href=""></a></dt>
   <dd>
-      Though <a href="http://en.wikipedia.org/wiki/Black_Monday_(1987)#Causes">trading software has been a scapegoat for the 1987 Wall Street Crash in the U.S.</a>,
-      the international chain of events suggests there was more going on.
   </dd>
 
-  <dt></dt>
-  <dd></dd>
 </dl>
--->
 
 <h2>References</h2>
 

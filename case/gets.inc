@@ -20,8 +20,8 @@ $Bugs['gets'] = array(
   'causes' => array(
     'unrealistic risk assessment' => 3,
     'lack of a defensive design' => 1,
-    'buffer overflow' => 1,
     'insufficient input validation' => 1,
+    'buffer overflow' => 1,
   ),
   'refs' => array(
     array(
@@ -48,6 +48,11 @@ $Bugs['gets'] = array(
       'title'     => 'Critical Sendmail Vulnerability',
       'author'    => 'Tony Bradley',
       'url'       => 'http://netsecurity.about.com/cs/linuxsecurity/a/aa032203a.htm',
+    ),
+    array(
+      'title'     => 'List of Botnets',
+      'author'    => 'Wikipedia',
+      'url'       => 'http://en.wikipedia.org/wiki/Botnet#Historical_list_of_botnets',
     ),
   ),
 );

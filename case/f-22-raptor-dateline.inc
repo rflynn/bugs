@@ -16,6 +16,7 @@ $Bugs['f-22-raptor-dateline'] = array(
     'injuries' => 0,
     'lives-at-risk' => 6,
     'dollars' => null,
+    'dollars-at-risk' => 150e6 * 6,
   ),
   'causes' => array(
     'lack of defensive design' => null,

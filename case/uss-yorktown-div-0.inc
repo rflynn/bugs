@@ -29,7 +29,7 @@ EOS
     'divide by zero' => 1,
   ),
   'mitigating' => array(
-    'entering non-zero solves problem' => 2,
+    'entering non-zero solved problem' => 2,
   ),
   'compounding' => array(
     'multiple occureances' => 2,
@@ -54,6 +54,11 @@ EOS
       'title'     => 'Navy: Calibration flaw crashed Yorktown LAN',
       'author'    => 'Gregory Slabodkin',
       'url'       => 'http://gcn.com/articles/1998/11/09/navy-calibration-flaw-crashed-yorktown-lan.aspx?sc_lang=en',
+    ),
+    array(
+      'title'     => 'Sunk by Windows NT',
+      'author'    => '',
+      'url'       => 'http://www.wired.com/science/discoveries/news/1998/07/13987',
     ),
   ),
 );

@@ -12,9 +12,10 @@ $Bugs['mariner-1'] = array(
     'dollars' => 18.5e6
   ),
   'causes' => array(
+    'inadequate testing' => 1,
+    'inadequate review' => 1,
     'transcription error' => 1,
     'deadline pressure' => 1,
-    'inadequate testing' => 1
   ),
   'inaccuracies' => 'Although the bug is sometimes claimed to have been an incorrect FORTRAN DO statement, this is not correct. FORTRAN was not in use.',
   'refs' => array(
