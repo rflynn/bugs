@@ -16,9 +16,19 @@
   },
   "refs" : [
     {
+      "title"     : "1994 Scotland RAF Chinook crash",
+      "author"    : "Wikipedia",
+      "url"       : "http://en.wikipedia.org/wiki/1994_Scotland_RAF_Chinook_crash"
+    },
+    {
       "title"     : "The Chinook Helicopter Disaster",
       "author"    : "Prof. Simon Rogerson",
       "url"       : "http://www.ccsr.cse.dmu.ac.uk/resources/general/ethicol/Ecv12no2.html"
+    },
+    {
+      "title"     : "Top Chinook test pilot reveals unease over engine software",
+      "author"    : "Tony Collins",
+      "url"       : "http://www.computerweekly.com/feature/Top-Chinook-test-pilot-reveals-unease-over-engine-software"
     }
   ]
 }
