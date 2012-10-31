@@ -1,0 +1,41 @@
+{
+  "title" : "Mars Pathfinder Priority Inversion",
+  "when" : "1997",
+  "industry" : "aerospace",
+  "result" : {
+    "hard error" : 1,
+    "reboot loop" : 1
+  },
+  "cost" : {
+    "deaths" : 0,
+    "injuries" : 0,
+    "dollars" : null,
+    "delay-days" : 1
+  },
+  "causes" : {
+    "higher data rates than anticipated" : 1,
+    "corner case" : 1,
+    "priority inversion" : 1,
+    "inadequate testing" : 1,
+    "error seen in testing" : 1,
+    "deadline pressure" : 1
+  },
+  "mitigating" : {
+    "built-in logging and remote update features allowed diagnosis and correction " : null
+  },
+  "correction" : {
+    "enable semaphore prioritiy inheritance" : 1
+  },
+  "refs" : [
+    {
+      "title"     : "What Really Happened On Mars?",
+      "author"    : "Glenn E Reeves",
+      "url"       : "http://research.microsoft.com/en-us/um/people/mbj/Mars_Pathfinder/Authoritative_Account.html"
+    },
+    {
+      "title"     : "Mars Pathfinder",
+      "author"    : "Wikipedia",
+      "url"       : "http://en.wikipedia.org/wiki/Mars_Pathfinder"
+    }
+  ]
+}

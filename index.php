@@ -34,9 +34,17 @@ td ul li:before {
 
 <body>
 
+<<<<<<< HEAD
+=======
+<h1>
+<img border="0" width="32" height="32" style="vertical-align:text-bottom" alt="" title="" src="data:image/gif;base64,R0lGODlhEAAQAMIEAAACADk6V0WWj7PT8P///////////////yH5BAEKAAQALAAAAAAQABAAAANESEqx/gu4BuOEAejcZFXAMAAc401DIIiCFzQZuIqDQDkASdNtFfCs2AQwS9UkL4uKFrotOirBivS4cUiqD+GkfXYv2gQAOw==">
+Software Engineering Disaster Hall of Fame</h1>
+<h3>Compiled by Ryan Flynn</h3>
+
+>>>>>>> ca5a7adc745a3664c4f88417b973b115ecf36d2c
 <?php
 
-error_reporting(E_ALL);
+error_reporting(-1);
 
 @include_once('../util.inc');
 
@@ -52,13 +60,19 @@ $cases =
     scandir('./case/'),
     function ($f)
     {
-      return preg_match('/\.inc$/', $f);
+      return preg_match('/\.json$/', $f);
     });
+
+$Bugs = array();
 
 foreach ($cases as $case)
 {
   $path = "case/$case";
-  @include_once($path);
+  $json = file_get_contents($path);
+  $data = json_decode($json, true);
+  if (!$data)
+    echo json_last_error();
+  $Bugs[basename($case, '.json')] = $data;
 }
 
 function eschtml($str)
@@ -90,8 +104,9 @@ function cost($c)
   $cost = array();
   if ($c['deaths'])
   {
-    $cost[] = sprintf('%u death%s', $c['deaths'],
-      $c['deaths'] == 1 ? '' : 's');
+    $cost[] = sprintf('%u death%s',
+                $c['deaths'],
+                $c['deaths'] == 1 ? '' : 's');
   }
   if (@$c['injuries'])
   {
@@ -106,14 +121,14 @@ function cost($c)
   # exchange rate atht the time of the incident
   if (@$c['dollars'])
   {
-    $cost[] = sprintf('$%s', number_format($c['dollars']));
-  }
-  if (!@$c['dollars'])
-  {
-    if (@$cost['£'])
-    {
-      $cost[] = sprint('"£', number_format($c['£']));
-    }
+    $d = dollars($c);
+    $cost[] = sprintf('$%s', number_format($d));
+  } else if (@$c['£']) {
+    $cost[] = sprintf('£%s', number_format($c['£']));
+  } else if (@$c['€']) {
+    $cost[] = sprintf('€%s', number_format($c['€']));
+  } else if (@$c['AUD']) {
+    $cost[] = sprintf('AUD%s', number_format($c['AUD']));
   }
   if (@$c['jobs'])
   {
@@ -161,6 +176,14 @@ function inflation($dollars, $when)
   return $dollars * $factor;
 }
 
+function dollars($a)
+{
+    $dollars = @$a['dollars'];
+    if (is_array($dollars))
+        $dollars = array_sum(array_values($dollars));
+    return $dollars;
+}
+
 uasort($Bugs,
   function ($a, $b)
   {
@@ -181,8 +204,8 @@ uasort($Bugs,
     $cmp = @$bc['lives-at-risk'] - @$ac['lives-at-risk'];
     if ($cmp)
       return $cmp;
-    $acost = inflation(@$ac['dollars'], $a['when']);
-    $bcost = inflation(@$bc['dollars'], $b['when']);
+    $acost = inflation(dollars($ac), $a['when']);
+    $bcost = inflation(dollars($bc), $b['when']);
     if ($acost != $bcost)
       return $acost > $bcost ? -1 : 1;
     $cmp = @$bc['jobs'] - @$ac['jobs'];
@@ -289,7 +312,7 @@ uasort($Bugs,
 
   <dt><a href="http://www.eng.uab.edu/cee/faculty/ndelatte/case_studies_project/Hartford%20Civic%20Center/hartford.htm">Hartford Civic Center Arena Roof Collapse</a></dt>
   <dd>
-    Though a CAD program gave improper results and thus a false sense of security to a flawed design,
+    Though a CAD program gave improper results and thus lent a false sense of security to a flawed design,
     this is foremost an engineering and construction failure.
   </dd>
 

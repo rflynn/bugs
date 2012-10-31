@@ -1,0 +1,46 @@
+{
+  "title" : "Jurassic Park Dinosaur Count",
+  "when" : "1990",
+  "industry" : "entertainment",
+  "summary" : "Major facility relies on a single disgruntled engineer who implements animal population count as Pop >= N instead of Pop == N",
+  "correction" : {
+    "== instead of >=" : null
+  },
+  "causes" : {
+    "overreliance on automation" : null,
+    "inadequate disaster recovery" : null,
+    "insufficient review" : null,
+    "inadequate documentation" : null,
+    "unexpected results ignored" : null,
+    "corner case" : null,
+    "edge case" : null,
+    "logic error" : null
+  },
+  "result" : {
+    "population breeds unchecked" : 1,
+    "facility a total loss" : 1
+  },
+  "cost" : {
+    "deaths" : 6,
+    "injuries" : 1,
+    "dollars" : 100e6,
+    "fiction" : true
+  },
+  "mitigating" : {
+    "fictional" : 1,
+    "entertaining" : 1,
+    "involves dinosaurs" : 1
+  },
+  "refs" : [
+    {
+      "title"     : "Tales From the Crucible-Secrets of a High-Tech Expert",
+      "author"    : "Warren S. Reid",
+      "url"       : "http://www5.in.tum.de/~huckle/trenches.htm"
+    },
+    {
+      "title"     : "Jurassic Park (novel)",
+      "author"    : "Wikipedia",
+      "url"       : "http://en.wikipedia.org/wiki/Jurassic_Park_(novel)#Plot_summary"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "title" : "Sony BMG Rootkit",
+  "when" : "2005",
+  "industry" : "entertainment",
+  "summary" : "In the face of falling CD sales and increasing online media piracy in the early 2000s Sony purchased, stole and assembled software components into a Microsoft Windows-specific rootkit and installed it on 50 CDs, infecting any Windows system they were inserted",
+  "causes" : {
+    "assymetric response to perceived threat" : null,
+    "hurt legitimate customers the most" : null,
+    "fix made problem worse" : null
+  },
+  "result" : {
+    "PR disaster" : 1,
+    "product recall" : 1,
+    "500,000+ vulnerabilities" : 1,
+    "multiple class-action lawsuits" : 2
+  },
+  "cost" : {
+    "deaths" : 0,
+    "injuries" : 0,
+    "dollars" : 5.75e6,
+    "recalls" : 4e6,
+    "remote-vulnerabilities" : 500e3
+  },
+  "compounding" : {
+    "anti-piracy measures only affected legitimate consumers" : null,
+    "protection ineffective" : null,
+    "created additional vulnerabilities" : null,
+    "software license violation" : null
+  },
+  "mitigating" : {
+  },
+  "refs" : [
+    {
+      "title"     : "Sony BMG copy protection rootkit scandal",
+      "author"    : "Wikipedia",
+      "url"       : "http://en.wikipedia.org/wiki/Sony_BMG_copy_protection_rootkit_scandal"
+    },
+    {
+      "title"     : "Sony's DRM Rootkit: The Real Story",
+      "author"    : "Bruce Shneier",
+      "url"       : "http://www.schneier.com/blog/archives/2005/11/sonys_drm_rootk.html"
+    },
+    {
+      "title"     : "Sony to pull controversial CDs, offer swap",
+      "author"    : "Jefferson Graham",
+      "url"       : "http://www.usatoday.com/money/industries/technology/2005-11-14-sony-cds_x.htm"
+    },
+    {
+      "title"     : "Sony BMG Litigation Info",
+      "author"    : "Electronic Frontier Foundation",
+      "url"       : "http://www.eff.org/cases/sony-bmg-litigation-info"
+    }
+  ]
+}

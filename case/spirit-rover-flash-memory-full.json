@@ -1,0 +1,28 @@
+{
+  "title" : "Spirit Mars Rover Flash Drive Full",
+  "when" : "Jan 21, 2004",
+  "industry" : "aerospace",
+  "causes" : {
+    "file system full" : 1
+  },
+  "result" : {
+    "system entered fault mode" : 1
+  },
+  "cost" : {
+    "deaths" : 0,
+    "injuries" : 0,
+    "dollars" : null,
+    "delay-days" : 12
+  },
+  "mitigating" : {
+    "interactive debugging allowed diagnosis and correction" : null
+  },
+  "refs" : [
+    {
+      "title"     : "Spirit Rover",
+      "subtitle"  : "Sol 18 (January 21, 2004} flash memory management anomaly",
+      "author"    : "Wikipedia",
+      "url"       : "http://en.wikipedia.org/wiki/Spirit_rover#Sol_18_.28January_21.2C_2004.29_flash_memory_management_anomaly"
+    }
+  ]
+}

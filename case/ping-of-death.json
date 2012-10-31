@@ -1,0 +1,29 @@
+{
+  "title" : "Ping of Death",
+  "when" : "1995-1996",
+  "industry" : "software",
+  "result" : "millions of remote vulnerabilities",
+  "cost" : {
+    "deaths" : 0,
+    "injuries" : 0,
+    "dollars" : null
+  },
+  "causes" : {
+    "incomplete implementation of complex standard" : 1,
+    "insufficient input validation" : 1,
+    "buffer overflow" : 1,
+    "non-isolated memory" : 1,
+    "inadequate testing" : 1
+  },
+  "mitigating" : {
+    "firewalls offer protection" : 1
+  },
+  "refs" : [
+    {
+      "title"     : "Ping of Death",
+      "subtitle"  : "",
+      "author"    : "Wikipedia",
+      "url"       : "http://en.wikipedia.org/wiki/Ping_of_death"
+    }
+  ]
+}
